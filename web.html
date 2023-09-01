@@ -1,12 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProyectoUbuntu</title>
 </head>
 <body>
-    <h1>Este es mi primer proyecto con Ubuntu. estas listo.</h1>
-    <h2>No olvides tomar el curso de git y github de platzi</h2>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Ejemplo de HTML y JavaScript</title>
+    </head>
+    <body>
+        <h1>Este es mi primer proyecto con Ubuntu.</h1>
+        <h2>No olvides tomar el curso de git y github</h2>
+
+        <h3>git y github.Ahora toca profundizar</h3>
+        <p id="mensaje">Disfruté mucho la clase, fue realmente interesante.</p>
+        <button onclick="cambiarMensaje()">Cambiar Mensaje</button>
+    
+        <script>
+            var mensajes = [
+                "Hola platzi😊", 
+                "La clase fue genial, me encantó😉", 
+                "La clase fue excelente, me dejó muy satisfecho.😁", 
+                "Disfruté mucho de la clase, fue muy informativa.😘", 
+                "Me gustó mucho la clase, definitivamente valió la pena(❁´◡`❁)"
+                            ]
+            
+            var indiceMensaje = 0;
+            var mensajeElement = document.getElementById("mensaje");
+    
+            function cambiarMensaje() {
+                if (indiceMensaje < mensajes.length - 1) {
+                    indiceMensaje++;
+                } else {
+                    indiceMensaje = 0;
+                }
+                mensajeElement.innerHTML = mensajes[indiceMensaje];
+            }
+    
+            // Cambia el mensaje cada 2 segundos
+            setInterval(cambiarMensaje, 4000);
+        </script>
+    </body>
+    </html>
+    
 </body>
 </html>
